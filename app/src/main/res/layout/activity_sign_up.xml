@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintVertical_bias="0.29"
         tools:context=".SignUpActivity">
 
         <TextView
@@ -102,13 +102,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnSignUp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:backgroundTint="#E69816"
             android:hint="@string/action_login"
-            android:text="Login"
+            android:text="SignUp"
             app:cornerRadius="20sp" />
 
     </LinearLayout>
@@ -138,7 +138,7 @@
             android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="125dp"
+            android:layout_marginLeft="120dp"
             android:layout_marginTop="100dp"
             android:text="Login"
             android:textColor="#2B54E7"
