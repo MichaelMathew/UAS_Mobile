@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblue"
+    android:background="#2EB3DD"
     android:orientation="vertical"
     android:padding="@dimen/app_value"
     tools:context=".LoginActivity">
@@ -13,9 +13,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
             android:id="@+id/btnLogin"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/holo_orange_dark"
+            android:backgroundTint="#E69816"
             android:hint="@string/action_login"
             android:text="Login"
             app:cornerRadius="20sp" />
@@ -76,9 +76,9 @@
         android:id="@+id/linearLayout1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout"
@@ -100,7 +100,7 @@
             android:layout_marginLeft="125dp"
             android:layout_marginTop="100dp"
             android:text="Sign Up"
-            android:textColor="@color/blue"
+            android:textColor="#2B54E7"
             app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
