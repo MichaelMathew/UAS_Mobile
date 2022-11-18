@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightblue"
     android:orientation="vertical"
     android:padding="@dimen/app_value"
-    android:background="@color/lightblue"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -25,13 +25,17 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            android:layout_height="199dp"
+            app:srcCompat="@drawable/logourgalon" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="30dp"
+            app:boxCornerRadiusBottomEnd="20sp"
+            app:boxCornerRadiusBottomStart="20sp"
+            app:boxCornerRadiusTopEnd="20sp"
+            app:boxCornerRadiusTopStart="20sp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
@@ -41,9 +45,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            app:boxCornerRadiusBottomEnd="20sp"
+            app:boxCornerRadiusBottomStart="20sp"
+            app:boxCornerRadiusTopEnd="20sp"
+            app:boxCornerRadiusTopStart="20sp"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -57,9 +65,10 @@
             android:id="@+id/btnLogin"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:backgroundTint="@android:color/holo_orange_dark"
             android:hint="@string/action_login"
-            android:text="Login" />
+            android:text="Login"
+            app:cornerRadius="20sp" />
 
     </LinearLayout>
 
@@ -95,7 +104,6 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
