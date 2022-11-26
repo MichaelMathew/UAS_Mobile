@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/frame2"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2EB3DD"
     tools:context=".Profile">
 
 
     <LinearLayout
-        android:layout_marginBottom="70dp"
-        android:layout_marginTop="75dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="661dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="70dp"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_baseline_person_pin_24"/>
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/ic_baseline_person_pin_24" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,19 +38,22 @@
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="280dp"
-                android:layout_height="39dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:layout_marginRight="20dp"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20sp"
-                app:boxCornerRadiusTopStart="20sp">
+                app:boxCornerRadiusTopStart="20sp"
+                app:boxStrokeColor="#FF9800"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_nama"
-                    android:layout_width="260dp"
-                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
 
                     android:layout_marginRight="50dp" />
@@ -76,7 +81,9 @@
                 app:boxCornerRadiusBottomEnd="20sp"
                 app:boxCornerRadiusBottomStart="20sp"
                 app:boxCornerRadiusTopEnd="20sp"
-                app:boxCornerRadiusTopStart="20sp">
+                app:boxCornerRadiusTopStart="20sp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_alamat"
@@ -91,7 +98,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -102,19 +109,21 @@
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="280dp"
-                android:layout_height="46dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20sp"
-                app:boxCornerRadiusTopStart="20sp">
+                app:boxCornerRadiusTopStart="20sp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_noHp"
-                    android:layout_width="260dp"
-                    android:layout_height="37dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="50dp" />
@@ -122,12 +131,13 @@
 
 
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Depot Default:"
+            android:layout_marginLeft="49dp"
             android:layout_marginTop="25dp"
-            android:layout_marginLeft="49dp"/>
+            android:text="Depot Default:" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="379dp"
@@ -137,14 +147,18 @@
             app:boxCornerRadiusBottomEnd="20dp"
             app:boxCornerRadiusBottomStart="20dp"
             app:boxCornerRadiusTopEnd="20sp"
-            app:boxCornerRadiusTopStart="20sp">
+            app:boxCornerRadiusTopStart="20sp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_bookmark"
-                android:layout_width="332dp"
+                android:layout_width="match_parent"
                 android:layout_height="116dp"
                 android:layout_marginLeft="47dp"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -152,6 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#E69816"
             android:text="Save" />
     </LinearLayout>
 </FrameLayout>

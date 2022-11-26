@@ -31,13 +31,17 @@
             app:srcCompat="@drawable/logourgalon" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            app:boxBackgroundColor="@color/white"
             app:boxCornerRadiusBottomEnd="20sp"
             app:boxCornerRadiusBottomStart="20sp"
             app:boxCornerRadiusTopEnd="20sp"
-            app:boxCornerRadiusTopStart="20sp">
+            app:boxCornerRadiusTopStart="20sp"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
@@ -51,11 +55,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            app:boxBackgroundColor="@color/white"
             app:boxCornerRadiusBottomEnd="20sp"
             app:boxCornerRadiusBottomStart="20sp"
             app:boxCornerRadiusTopEnd="20sp"
             app:boxCornerRadiusTopStart="20sp"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"

@@ -5,59 +5,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2EB3DD"
     tools:context=".Profile">
 
 
     <LinearLayout
-        android:layout_marginBottom="70dp"
-        android:layout_marginTop="70dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="661dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_baseline_person_pin_24"/>
+            app:srcCompat="@drawable/ic_baseline_person_pin_24" />
 
         <TextView
             android:id="@+id/tv_username"
-            android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
             android:text="User001"
-            android:textSize="16sp"
-            android:layout_gravity="center"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_point"
-            android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:text="Total Point: 0 Point"
-            android:textSize="14sp"
-            android:layout_gravity="center"/>
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/btn_editProfile"
-            android:layout_marginTop="40dp"
             android:layout_width="254dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#E69816"
             android:text="Edit Profile"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
         <Button
             android:id="@+id/btn_logout"
-            android:layout_marginTop="20dp"
             android:layout_width="254dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#C13838"
             android:text="Logout"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
 
     </LinearLayout>
