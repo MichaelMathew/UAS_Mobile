@@ -53,7 +53,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,34 +64,20 @@
                 android:text="Nama :"
                 android:textSize="14sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="20dp"
-                app:boxCornerRadiusBottomEnd="20dp"
-                app:boxCornerRadiusBottomStart="20dp"
-                app:boxCornerRadiusTopEnd="20sp"
-                app:boxCornerRadiusTopStart="20sp"
-                app:boxStrokeColor="#FF9800"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_nama"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-
-                    android:layout_marginRight="50dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/et_nama"
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edit_text"/>
 
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="98dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -101,23 +88,13 @@
                 android:text="Alamat :"
                 android:textSize="14sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="280dp"
-                android:layout_height="92dp"
-                app:boxCornerRadiusBottomEnd="20sp"
-                app:boxCornerRadiusBottomStart="20sp"
-                app:boxCornerRadiusTopEnd="20sp"
-                app:boxCornerRadiusTopStart="20sp"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_alamat"
-                    android:layout_width="260dp"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/et_alamat"
+                android:layout_width="265dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edit_text" />
 
 
         </LinearLayout>
@@ -131,29 +108,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
                 android:text="No HP :"
                 android:textSize="14sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="20dp"
-                app:boxCornerRadiusBottomEnd="20dp"
-                app:boxCornerRadiusBottomStart="20dp"
-                app:boxCornerRadiusTopEnd="20sp"
-                app:boxCornerRadiusTopStart="20sp"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_noHp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="50dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/et_noHp"
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edit_text"/>
 
 
         </LinearLayout>
@@ -165,27 +130,13 @@
             android:layout_marginTop="25dp"
             android:text="Depot Default:" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="379dp"
-            android:layout_height="116dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="20dp"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            app:boxCornerRadiusTopEnd="20sp"
-            app:boxCornerRadiusTopStart="20sp"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_bookmark"
-                android:layout_width="match_parent"
-                android:layout_height="116dp"
-                android:layout_marginLeft="47dp"
-                android:layout_marginTop="5dp"
-
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:id="@+id/et_bookmark"
+            android:layout_width="332dp"
+            android:layout_height="104dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_edit_text" />
 
         <Button
             android:id="@+id/btn_save"
