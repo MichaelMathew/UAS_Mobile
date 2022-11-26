@@ -39,6 +39,10 @@ class Profile : Fragment() {
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }
+        profileBinding.btnLogout.setOnClickListener {
+            val intent = Intent(activity,LoginActivity::class.java)
+            startActivity(intent)
+        }
         return profileBinding.root
     }
 
@@ -53,11 +57,11 @@ class Profile : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             Profile().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+//                    putString(ARG_PARAM1, param1)
+//                    putString(ARG_PARAM2, param2)
                 }
             }
     }

@@ -29,6 +29,24 @@ class EditProfile : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         fragmentEditProfileBinding = FragmentEditProfileBinding.inflate(inflater, container, false)
+        fragmentEditProfileBinding.btnSave.setOnClickListener {
+            val bundle = Bundle()
+            val profile: Profile = Profile.newInstance()
+            profile.arguments = bundle
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.frame3,profile)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
+        fragmentEditProfileBinding.backtoprofile.setOnClickListener {
+            val bundle = Bundle()
+            val profile: Profile = Profile.newInstance()
+            profile.arguments = bundle
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.frame3,profile)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
         return fragmentEditProfileBinding.root
     }
 
