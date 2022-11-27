@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import com.michael.urgalon.databinding.FragmentEditProfileBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,6 +20,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class EditProfile : Fragment() {
     private lateinit var fragmentEditProfileBinding: FragmentEditProfileBinding
+    private lateinit var name: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,8 @@ class EditProfile : Fragment() {
         fragmentEditProfileBinding = FragmentEditProfileBinding.inflate(inflater, container, false)
         fragmentEditProfileBinding.btnSave.setOnClickListener {
             val bundle = Bundle()
+            val editname = fragmentEditProfileBinding.etNama.text.toString()
+            bundle.putString("hasilname",editname)
             val profile: Profile = Profile.newInstance()
             profile.arguments = bundle
             val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
@@ -48,6 +52,13 @@ class EditProfile : Fragment() {
             fragmentTransaction?.commit()
         }
         return fragmentEditProfileBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        name = arguments?.getString("hasilname").toString()
+        val editname = view.findViewById<EditText>(R.id.et_nama)
+        editname.setText(name).toString()
     }
 
     companion object {
