@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "399486801775",
+    "project_id": "urgalon-125ed",
+    "storage_bucket": "urgalon-125ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399486801775:android:7060071202913ed8537a9a",
+        "android_client_info": {
+          "package_name": "com.michael.urgalon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399486801775-fvnpb4vp05ecj4ttdifvhni5srvaesc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZIV4Io_aUxS7cQqMEbMI6Rpu2mjxOB1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399486801775-fvnpb4vp05ecj4ttdifvhni5srvaesc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

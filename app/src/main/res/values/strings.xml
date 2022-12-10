@@ -5,8 +5,8 @@
     <string name="text_password">Password</string>
     <string name="msg_success">login successful</string>
     <string name="msg_failed_login">Login Failed</string>
-    <string name="message_error_email_empty">Error Email</string>
-    <string name="message_error_pw_empty">Error Password</string>
+    <string name="message_error_email_empty">Empty Email</string>
+    <string name="message_error_pw_empty">Empty Password</string>
     <string name="action_signup">SignUp</string>
     <string name="message_error_username_empty">Empty Username</string>
     <string name="message_error_confirmpw_empty">Confirm Password Is Empty</string>
@@ -102,4 +102,8 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="err_invalid_login">Invalid Login</string>
+    <string name="message_error_pw">Password Not Match With Confirm Password</string>
+    <string name="message_error_confirmpw">Confirm Password Not Match With Password</string>
+    <string name="err_invalid_signup">Invalid SignUp</string>
 </resources>

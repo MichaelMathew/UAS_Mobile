@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.michael.urgalon.databinding.FragmentProfileBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -23,6 +26,7 @@ private const val ARG_PARAM2 = "param2"
 class Profile : Fragment() {
     private lateinit var profileBinding: FragmentProfileBinding
     private lateinit var name: String
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +48,9 @@ class Profile : Fragment() {
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }
+        firebaseAuth = Firebase.auth
         profileBinding.btnLogout.setOnClickListener {
+            Firebase.auth.signOut()
             val intent = Intent(activity,LoginActivity::class.java)
             startActivity(intent)
         }
