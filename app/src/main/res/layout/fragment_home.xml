@@ -218,6 +218,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="16dp"
                 android:entries="@array/layanan"
+                android:background="@drawable/custom_edit_text"
 
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
