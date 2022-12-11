@@ -117,9 +117,10 @@
 
         <Button
             android:id="@+id/btnSignUp"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:backgroundTint="#E69816"
             android:hint="@string/action_login"
             android:text="SignUp"
@@ -141,7 +142,7 @@
 
         <TextView
             android:id="@+id/tv_acc"
-            android:layout_width="wrap_content"
+            android:layout_width="261dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:text="Do you have an account ?"
@@ -150,9 +151,9 @@
 
         <TextView
             android:id="@+id/tv_login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
+
             android:layout_marginTop="100dp"
             android:text="Login"
             android:textColor="#2B54E7"
