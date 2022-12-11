@@ -281,7 +281,7 @@
                     android:orientation="horizontal">
 
                     <Button
-
+                        android:id="@+id/isiminus"
                         android:layout_width="40dp"
                         android:layout_height="wrap_content"
 
@@ -290,7 +290,7 @@
                         app:cornerRadius="10sp" />
 
                     <TextView
-
+                        android:id="@+id/jumlahisi"
                         android:layout_width="48dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -299,7 +299,7 @@
                         android:textAlignment="center" />
 
                     <Button
-
+                        android:id="@+id/isiplus"
                         android:layout_width="40dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/orange"

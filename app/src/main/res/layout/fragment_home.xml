@@ -311,7 +311,7 @@
                             android:orientation="horizontal">
 
                             <Button
-
+                                android:id="@+id/minusaqua"
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
 
@@ -320,7 +320,7 @@
                                 app:cornerRadius="10sp" />
 
                             <TextView
-
+                                android:id="@+id/jmlaqua"
                                 android:layout_width="48dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
@@ -329,7 +329,7 @@
                                 android:textAlignment="center" />
 
                             <Button
-
+                                android:id="@+id/plusaqua"
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/orange"
@@ -356,7 +356,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
-                            android:text="Aqua"
+                            android:text="Anidis"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
@@ -365,7 +365,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Rp.16000"
+                            android:text="Rp.25000"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
@@ -378,7 +378,7 @@
                             android:orientation="horizontal">
 
                             <Button
-
+                                android:id="@+id/minusanidis"
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
 
@@ -387,7 +387,7 @@
                                 app:cornerRadius="10sp" />
 
                             <TextView
-
+                                android:id="@+id/jmlanidis"
                                 android:layout_width="48dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
@@ -396,7 +396,7 @@
                                 android:textAlignment="center" />
 
                             <Button
-
+                                android:id="@+id/plusanidis"
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/orange"
@@ -430,7 +430,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
-                            android:text="Aqua"
+                            android:text="RON88"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
@@ -452,7 +452,7 @@
                             android:orientation="horizontal">
 
                             <Button
-
+                                android:id="@+id/minusron88"
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
 
@@ -461,6 +461,7 @@
                                 app:cornerRadius="10sp" />
 
                             <TextView
+                                android:id="@+id/jmlron88"
 
                                 android:layout_width="48dp"
                                 android:layout_height="wrap_content"
@@ -470,6 +471,7 @@
                                 android:textAlignment="center" />
 
                             <Button
+                                android:id="@+id/plusron88"
 
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
@@ -497,7 +499,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
-                            android:text="Aqua"
+                            android:text="VIT"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
@@ -519,6 +521,7 @@
                             android:orientation="horizontal">
 
                             <Button
+                                android:id="@+id/minusvit"
 
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
@@ -528,6 +531,7 @@
                                 app:cornerRadius="10sp" />
 
                             <TextView
+                                android:id="@+id/jmlvit"
 
                                 android:layout_width="48dp"
                                 android:layout_height="wrap_content"
@@ -537,6 +541,7 @@
                                 android:textAlignment="center" />
 
                             <Button
+                                android:id="@+id/plusvit"
 
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"

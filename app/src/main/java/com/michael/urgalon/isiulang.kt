@@ -22,6 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class isiulang : Fragment() {
     private lateinit var isiulangbinding: FragmentIsiulangBinding
+    var isi = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,6 +72,14 @@ class isiulang : Fragment() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
 
             }
+        }
+        isiulangbinding.isiminus.setOnClickListener {
+            isi--
+            isiulangbinding.jumlahisi.text = isi.toString()
+        }
+        isiulangbinding.isiplus.setOnClickListener {
+            isi++
+            isiulangbinding.jumlahisi.text = isi.toString()
         }
         return isiulangbinding.root
     }

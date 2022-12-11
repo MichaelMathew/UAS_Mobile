@@ -25,7 +25,10 @@ private const val ARG_PARAM2 = "param2"
  */
 class Home : Fragment() {
     private lateinit var homeBinding: FragmentHomeBinding
-
+    var isiaqua = 0
+    var isianidis= 0
+    var isivit = 0
+    var isiron88 = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,7 +78,41 @@ class Home : Fragment() {
 
             }
         }
+        homeBinding.minusaqua.setOnClickListener {
+            isiaqua--
+            homeBinding.jmlaqua.text = isiaqua.toString()
+        }
+        homeBinding.plusaqua.setOnClickListener {
+            isiaqua++
+            homeBinding.jmlaqua.text = isiaqua.toString()
+        }
 
+        homeBinding.minusanidis.setOnClickListener {
+            isianidis--
+            homeBinding.jmlanidis.text = isianidis.toString()
+        }
+        homeBinding.plusanidis.setOnClickListener {
+            isianidis++
+            homeBinding.jmlanidis.text = isianidis.toString()
+        }
+
+        homeBinding.minusron88.setOnClickListener {
+            isiron88--
+            homeBinding.jmlron88.text = isiron88.toString()
+        }
+        homeBinding.plusron88.setOnClickListener {
+            isiron88++
+            homeBinding.jmlron88.text = isiron88.toString()
+        }
+
+        homeBinding.minusvit.setOnClickListener {
+            isivit--
+            homeBinding.jmlvit.text = isivit.toString()
+        }
+        homeBinding.plusvit.setOnClickListener {
+            isivit++
+            homeBinding.jmlvit.text = isivit.toString()
+        }
         return homeBinding.root
     }
 
