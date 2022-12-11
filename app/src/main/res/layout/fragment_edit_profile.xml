@@ -96,7 +96,7 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/et_alamat"
+                  android:id="@+id/et_alamat"
                     android:layout_width="match_parent"
                     android:layout_height="61dp"
                     android:layout_marginLeft="15dp"
