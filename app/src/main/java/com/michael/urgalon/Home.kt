@@ -2,15 +2,16 @@ package com.michael.urgalon
 
 import android.R
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnTouchListener
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.fragment.app.Fragment
 import com.michael.urgalon.databinding.FragmentHomeBinding
-import com.michael.urgalon.databinding.FragmentIsiulangBinding
-import com.michael.urgalon.databinding.FragmentProfileBinding
 import com.michael.urgalon.entity.Layanan
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,6 +25,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class Home : Fragment() {
     private lateinit var homeBinding: FragmentHomeBinding
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +58,23 @@ class Home : Fragment() {
 //            fragmentTransaction?.addToBackStack(null)
 //            fragmentTransaction?.commit()
 //        }
+        homeBinding.spinlayanan.setSelection(0,false)
+        homeBinding.spinlayanan.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                val bundle = Bundle()
+                val isiulang = isiulang.newInstance()
+                isiulang.arguments = bundle
+                val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+                fragmentTransaction?.replace(com.michael.urgalon.R.id.frame1,isiulang)
+                fragmentTransaction?.addToBackStack(null)
+                fragmentTransaction?.commit()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
 
         return homeBinding.root
     }

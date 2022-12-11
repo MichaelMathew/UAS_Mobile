@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import com.michael.urgalon.databinding.FragmentIsiulangBinding
+import com.michael.urgalon.entity.Layanan
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,20 +20,30 @@ private const val ARG_PARAM2 = "param2"
  * Use the [isiulangFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class isiulangFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private lateinit var fragmentIsiulangbinding: FragmentIsiulangBinding
+class isiulang : Fragment() {
+    private lateinit var isiulangbinding: FragmentIsiulangBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        isiulangbinding = FragmentIsiulangBinding.inflate(inflater,container,false)
+        val layanan = ArrayList<Layanan>()
+        layanan.add(Layanan("Beli Galon"))
+        layanan.add(Layanan("Isi ulang"))
+
+        val layananAdapter = activity?.let {
+            ArrayAdapter(
+                it,
+                android.R.layout.simple_spinner_dropdown_item,
+                layanan
+            )
+        }
 
 //        fragmentIsiulangbinding.spinlayanan.setOnItemClickListener { adapterView, view, i, l ->  }{
 //            val bundle = Bundle()
@@ -41,7 +54,25 @@ class isiulangFragment : Fragment() {
 //            fragmentTransaction?.addToBackStack(null)
 //            fragmentTransaction?.commit()
 //        }
-        return fragmentIsiulangbinding.root
+        isiulangbinding.spinlayanan.adapter = layananAdapter
+        isiulangbinding.spinlayanan.setSelection(1,false)
+        isiulangbinding.spinlayanan.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                val bundle = Bundle()
+                val home:Home = Home.newInstance()
+                home.arguments = bundle
+                val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+                fragmentTransaction?.replace(R.id.frameisiulang,home)
+                fragmentTransaction?.addToBackStack(null)
+                fragmentTransaction?.commit()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
+        return isiulangbinding.root
     }
 
     companion object {
@@ -56,7 +87,7 @@ class isiulangFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
-            isiulangFragment().apply {
+            isiulang().apply {
                 arguments = Bundle().apply {
 //                    putString(ARG_PARAM1, param1)
 //                    putString(ARG_PARAM2, param2)
