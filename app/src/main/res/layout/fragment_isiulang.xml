@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2EB3DD"
+    android:visibility="visible"
     tools:context=".Profile">
 
     <LinearLayout
@@ -342,30 +343,46 @@
                         app:boxStrokeWidthFocused="0dp">
 
                         <com.google.android.material.textfield.TextInputEditText
-                           android:id="@+id/et_lokasi"
+                            android:id="@+id/et_lokasi"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
                             android:background="@drawable/custom_edit_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-<!--                    <EditText-->
-<!--                        android:id="@+id/et_alamat"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="125dp"-->
-<!--                        android:layout_marginLeft="15dp"-->
-<!--                        android:layout_marginTop="10dp"-->
-<!--                        android:layout_marginRight="15dp"-->
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/et_alamat"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="125dp"-->
+                    <!--                        android:layout_marginLeft="15dp"-->
+                    <!--                        android:layout_marginTop="10dp"-->
+                    <!--                        android:layout_marginRight="15dp"-->
 
-<!--                        android:background="@drawable/custom_edit_text" />-->
+                    <!--                        android:background="@drawable/custom_edit_text" />-->
 
 
                 </LinearLayout>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Button"
+                    android:visibility="visible" />
+            </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
+
 </FrameLayout>

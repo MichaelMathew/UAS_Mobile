@@ -1,12 +1,14 @@
 package com.michael.urgalon
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.michael.urgalon.databinding.FragmentIsiulangBinding
 import com.michael.urgalon.entity.Layanan
 
@@ -81,6 +83,16 @@ class isiulang : Fragment() {
             isi++
             isiulangbinding.jumlahisi.text = isi.toString()
         }
+        var lokasi = isiulangbinding.etLokasi.text.toString()
+        var total = isiulangbinding.total
+
+        if(TextUtils.isEmpty(lokasi)){
+            total.visibility = View.INVISIBLE
+        }
+        else{
+            total.visibility = View.VISIBLE
+        }
+
         return isiulangbinding.root
     }
 

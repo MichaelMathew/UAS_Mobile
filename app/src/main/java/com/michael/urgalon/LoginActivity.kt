@@ -48,13 +48,13 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-//    override fun onStart() {
-//        super.onStart();
-//        val curUser = firebaseAuth.currentUser;
-//        curUser?.let {
-//            updateUI();
-//        }
-//    }
+    override fun onStart() {
+        super.onStart();
+        val curUser = firebaseAuth.currentUser;
+        curUser?.let {
+            updateUI();
+        }
+    }
 
     private fun updateUI(){
         val intent = Intent(this@LoginActivity, HomeActivity::class.java);
