@@ -78,19 +78,33 @@ class isiulang : Fragment() {
         isiulangbinding.isiminus.setOnClickListener {
             isi--
             isiulangbinding.jumlahisi.text = isi.toString()
+
         }
         isiulangbinding.isiplus.setOnClickListener {
             isi++
             isiulangbinding.jumlahisi.text = isi.toString()
-        }
-        var lokasi = isiulangbinding.etLokasi.text.toString()
-        var total = isiulangbinding.total
 
-        if(TextUtils.isEmpty(lokasi)){
-            total.visibility = View.INVISIBLE
         }
-        else{
-            total.visibility = View.VISIBLE
+
+//        if(TextUtils.isEmpty(lokasi)){
+//            total.visibility = View.INVISIBLE
+//        }
+//        else{
+//            total.visibility = View.VISIBLE
+//        }
+        isiulangbinding.total.text = "Lanjut"
+        isiulangbinding.total.setOnClickListener {
+            val bundle = Bundle()
+            val lokasi = isiulangbinding.etLokasi.text.toString()
+            val jumlah = isiulangbinding.jumlahisi.text.toString()
+            bundle.putString("lokasi",lokasi)
+            bundle.putString("jumlah",jumlah)
+            val totalisiulang=totalisiulang.newInstance()
+            totalisiulang.arguments = bundle
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.frameisiulang,totalisiulang)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
         }
 
         return isiulangbinding.root
