@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -54,6 +55,8 @@ class Profile : Fragment() {
             val intent = Intent(activity,LoginActivity::class.java)
             startActivity(intent)
         }
+        val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
+        navbar.visibility = View.VISIBLE
         return profileBinding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

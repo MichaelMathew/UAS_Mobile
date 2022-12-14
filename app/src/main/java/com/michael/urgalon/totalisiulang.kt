@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.FrameLayout
 import android.widget.TextView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.michael.urgalon.databinding.FragmentHomeBinding
 import com.michael.urgalon.databinding.FragmentTotalisiulangBinding
 import com.michael.urgalon.entity.Layanan
@@ -78,10 +80,10 @@ class totalisiulang : Fragment() {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-
             }
         }
-
+        val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
+        navbar.visibility = View.GONE
 
         return totalisiulangBinding.root
     }

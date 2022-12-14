@@ -8,6 +8,7 @@ import android.view.View.OnTouchListener
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import com.michael.urgalon.databinding.FragmentHomeBinding
 import com.michael.urgalon.entity.Layanan
@@ -113,8 +114,11 @@ class Home : Fragment() {
             isivit++
             homeBinding.jmlvit.text = isivit.toString()
         }
+        val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
+        navbar.visibility = View.VISIBLE
         return homeBinding.root
     }
+
 
 
     companion object {

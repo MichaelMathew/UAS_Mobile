@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.FrameLayout
 import com.michael.urgalon.databinding.FragmentEditProfileBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -51,6 +52,8 @@ class EditProfile : Fragment() {
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }
+        val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
+        navbar.visibility = View.VISIBLE
         return fragmentEditProfileBinding.root
     }
 

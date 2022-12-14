@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.FrameLayout
 import android.widget.TextView
 import com.michael.urgalon.databinding.FragmentIsiulangBinding
 import com.michael.urgalon.entity.Layanan
@@ -85,7 +86,19 @@ class isiulang : Fragment() {
             isiulangbinding.jumlahisi.text = isi.toString()
 
         }
-
+        isiulangbinding.depot1.setOnClickListener{
+            isiulangbinding.logoseldepot.setImageResource(R.drawable.lembata)
+            isiulangbinding.horiscroll.visibility = View.GONE
+            isiulangbinding.seldepot.visibility = View.VISIBLE
+            isiulangbinding.ubah.visibility = View.VISIBLE
+            isiulangbinding.terdekat.visibility = View.GONE
+        }
+        isiulangbinding.ubah.setOnClickListener {
+            isiulangbinding.horiscroll.visibility = View.VISIBLE
+            isiulangbinding.seldepot.visibility = View.GONE
+            isiulangbinding.ubah.visibility = View.GONE
+            isiulangbinding.terdekat.visibility = View.VISIBLE
+        }
 //        if(TextUtils.isEmpty(lokasi)){
 //            total.visibility = View.INVISIBLE
 //        }
@@ -106,7 +119,8 @@ class isiulang : Fragment() {
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }
-
+        val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
+        navbar.visibility = View.VISIBLE
         return isiulangbinding.root
     }
 
