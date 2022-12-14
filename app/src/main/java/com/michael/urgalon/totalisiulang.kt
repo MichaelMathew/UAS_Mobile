@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.michael.urgalon.databinding.FragmentHomeBinding
@@ -51,6 +52,7 @@ class totalisiulang : Fragment() {
             )
         }
         totalisiulangBinding.spinbayar.adapter = bayarAdapter
+
         totalisiulangBinding.backtoisiulang.setOnClickListener{
             val bundle = Bundle()
             val isiulang = isiulang.newInstance()
@@ -60,6 +62,26 @@ class totalisiulang : Fragment() {
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }
+        totalisiulangBinding.spinbayar.setSelection(0,false)
+        totalisiulangBinding.spinbayar.onItemSelectedListener = object :
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                var metode = totalisiulangBinding.spinbayar.selectedItem.toString()
+                if (metode == "E-Wallet") {
+                    totalisiulangBinding.kolomewallet.visibility = View.VISIBLE
+                }
+                if (metode == "COD"){
+                    totalisiulangBinding.kolomewallet.visibility = View.GONE
+                }
+
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
+
 
         return totalisiulangBinding.root
     }
