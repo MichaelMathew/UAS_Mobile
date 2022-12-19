@@ -116,7 +116,7 @@ class isiulang : Fragment() {
             totalisiulang.arguments = bundle
             val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
             fragmentTransaction?.replace(R.id.frameisiulang,totalisiulang)
-            fragmentTransaction?.addToBackStack(null)
+//            fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }
         val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
