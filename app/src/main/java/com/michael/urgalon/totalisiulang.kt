@@ -61,8 +61,9 @@ class totalisiulang : Fragment() {
             isiulang.arguments = bundle
             val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
             fragmentTransaction?.replace(com.michael.urgalon.R.id.frametotalisiulang,isiulang)
-            fragmentTransaction?.addToBackStack(null)
+//            fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
+
         }
         totalisiulangBinding.spinbayar.setSelection(0,false)
         totalisiulangBinding.spinbayar.onItemSelectedListener = object :
