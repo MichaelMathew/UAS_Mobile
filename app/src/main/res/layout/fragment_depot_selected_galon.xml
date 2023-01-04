@@ -208,7 +208,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="146dp"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/aqua" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -275,13 +275,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="146dp"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/crystalline" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
-                                android:text="Anidis"
+                                android:text="Crystaline"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
@@ -303,7 +303,7 @@
                                 android:orientation="horizontal">
 
                                 <Button
-                                    android:id="@+id/minusanidis"
+                                    android:id="@+id/minuscrystaline"
                                     android:layout_width="51dp"
                                     android:layout_height="wrap_content"
 
@@ -312,7 +312,7 @@
                                     app:cornerRadius="10sp" />
 
                                 <TextView
-                                    android:id="@+id/jmlanidis"
+                                    android:id="@+id/jmlcrystaline"
                                     android:layout_width="48dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
@@ -321,7 +321,7 @@
                                     android:textAlignment="center" />
 
                                 <Button
-                                    android:id="@+id/plusanidis"
+                                    android:id="@+id/pluscrystaline"
                                     android:layout_width="51dp"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/orange"
@@ -349,7 +349,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="146dp"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/ron88" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -418,13 +418,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="146dp"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/pristine" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
-                                android:text="VIT"
+                                android:text="Pristine"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
@@ -446,7 +446,7 @@
                                 android:orientation="horizontal">
 
                                 <Button
-                                    android:id="@+id/minusvit"
+                                    android:id="@+id/minuspristine"
 
                                     android:layout_width="51dp"
                                     android:layout_height="wrap_content"
@@ -456,7 +456,7 @@
                                     app:cornerRadius="10sp" />
 
                                 <TextView
-                                    android:id="@+id/jmlvit"
+                                    android:id="@+id/jmlpristine"
 
                                     android:layout_width="48dp"
                                     android:layout_height="wrap_content"
@@ -466,7 +466,7 @@
                                     android:textAlignment="center" />
 
                                 <Button
-                                    android:id="@+id/plusvit"
+                                    android:id="@+id/pluspristine"
 
                                     android:layout_width="51dp"
                                     android:layout_height="wrap_content"
@@ -495,13 +495,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="146dp"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/purelife" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
-                                android:text="Aqua"
+                                android:text="Purelife"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
@@ -561,13 +561,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="146dp"
                                 android:layout_weight="1"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/total8" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
-                                android:text="Aqua"
+                                android:text="Total 8"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
