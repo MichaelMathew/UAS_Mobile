@@ -53,7 +53,7 @@ class History : Fragment() {
             val totalharga = 16000 * jumlah.toInt()
             historypesan.depot = depot
             historypesan.date = current
-            historypesan.pesanan = "Beli " + merk + jumlah + "x"
+            historypesan.pesanan = "Beli " + merk + " " + "x" + jumlah
             historypesan.totalharga = "Rp. " + totalharga
             historypesan.point = "+ " + totalharga/8000 + " Point"
             historys.add(historypesan)

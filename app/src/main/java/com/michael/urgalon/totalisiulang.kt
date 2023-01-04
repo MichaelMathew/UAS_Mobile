@@ -30,6 +30,7 @@ class totalisiulang : Fragment() {
     private lateinit var totalisiulangBinding: FragmentTotalisiulangBinding
     private lateinit var lokasi: String
     private lateinit var jumlah: String
+    private lateinit var depot: String
     var totalharga = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +84,22 @@ class totalisiulang : Fragment() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
             }
         }
+        totalisiulangBinding.totalpemesanan.setOnClickListener {
+            val bundle = Bundle()
+            val history = History.newInstance()
+            val merk = totalisiulangBinding.txtisiulang.text.toString()
+            history.arguments = bundle
+            bundle.putString("depot",depot)
+            bundle.putString("merk",merk)
+            bundle.putString("jumlah",jumlah)
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(com.michael.urgalon.R.id.frame1,history)
+//            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+            val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
+            navbar.visibility = View.VISIBLE
+        }
+
         val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
         navbar.visibility = View.GONE
 
@@ -90,15 +107,17 @@ class totalisiulang : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        lokasi = arguments?.getString("lokasi").toString()
-        jumlah = arguments?.getString("jumlah").toString()
+        lokasi = arguments?.getString("lokasiisi").toString()
+        jumlah = arguments?.getString("jumlahisi").toString()
+        depot = arguments?.getString("depotisi").toString()
         val locate = view.findViewById<TextView>(com.michael.urgalon.R.id.tv_lokasi)
         val jml = view.findViewById<TextView>(com.michael.urgalon.R.id.jmlisi)
         locate.setText(lokasi).toString()
         jml.setText(jumlah+"x").toString()
         totalharga = 8000 * jumlah.toInt()
         totalisiulangBinding.jmlharga.text = "Rp.$totalharga"
-        totalisiulangBinding.tvTotalharga.text = totalharga.toString()
+        totalisiulangBinding.tvTotalharga.text = "Rp.$totalharga"
+        totalisiulangBinding.totalpemesanan.text = "Total Pemesanan: Rp " + totalharga
     }
 
     companion object {

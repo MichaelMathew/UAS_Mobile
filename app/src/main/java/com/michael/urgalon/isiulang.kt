@@ -95,8 +95,16 @@ class isiulang : Fragment() {
             val alert = builder.create()
             alert.show()
         }
+        isiulangbinding.etLokasi.isClickable = false
+//        isiulangbinding.etLokasi.isEnabled = false
         isiulangbinding.depot1.setOnClickListener{
-
+            val bundle = Bundle()
+            val depotsisiulang:DepotSelectedIsiUlang = DepotSelectedIsiUlang.newInstance()
+            depotsisiulang.arguments = bundle
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(com.michael.urgalon.R.id.frame1,depotsisiulang)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
         }
 
         isiulangbinding.ubah.setOnClickListener {
@@ -110,20 +118,7 @@ class isiulang : Fragment() {
 //        else{
 //            total.visibility = View.VISIBLE
 //        }
-        isiulangbinding.total.text = "Lanjut"
-        isiulangbinding.total.setOnClickListener {
-            val bundle = Bundle()
-            val lokasi = isiulangbinding.etLokasi.text.toString()
-            val jumlah = isiulangbinding.jumlahisi.text.toString()
-            bundle.putString("lokasi",lokasi)
-            bundle.putString("jumlah",jumlah)
-            val totalisiulang=totalisiulang.newInstance()
-            totalisiulang.arguments = bundle
-            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
-            fragmentTransaction?.replace(R.id.frameisiulang,totalisiulang)
-//            fragmentTransaction?.addToBackStack(null)
-            fragmentTransaction?.commit()
-        }
+
         val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
         navbar.visibility = View.VISIBLE
         return isiulangbinding.root
