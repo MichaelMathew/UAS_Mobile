@@ -94,25 +94,7 @@ class Home : Fragment() {
         }
 
 
-        homeBinding.minusanidis.setOnClickListener {
-            val builder = AlertDialog.Builder(context)
-            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
-            builder.setPositiveButton("OK"
-            ) { p0, p1 -> p0.dismiss()
-            }
-            val alert = builder.create()
-            alert.show()
 
-        }
-        homeBinding.plusanidis.setOnClickListener {
-            val builder = AlertDialog.Builder(context)
-            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
-            builder.setPositiveButton("OK"
-            ) { p0, p1 -> p0.dismiss()
-            }
-            val alert = builder.create()
-            alert.show()
-        }
 
         homeBinding.minusron88.setOnClickListener {
             val builder = AlertDialog.Builder(context)
@@ -133,24 +115,7 @@ class Home : Fragment() {
             alert.show()
         }
 
-        homeBinding.minusvit.setOnClickListener {
-            val builder = AlertDialog.Builder(context)
-            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
-            builder.setPositiveButton("OK"
-            ) { p0, p1 -> p0.dismiss()
-            }
-            val alert = builder.create()
-            alert.show()
-        }
-        homeBinding.plusvit.setOnClickListener {
-            val builder = AlertDialog.Builder(context)
-            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
-            builder.setPositiveButton("OK"
-            ) { p0, p1 -> p0.dismiss()
-            }
-            val alert = builder.create()
-            alert.show()
-        }
+
         homeBinding.image1.setOnClickListener {
             val bundle = Bundle()
             val depotsgalon:DepotSelectedGalon = DepotSelectedGalon.newInstance()

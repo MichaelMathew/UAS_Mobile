@@ -107,11 +107,7 @@ class isiulang : Fragment() {
             fragmentTransaction?.commit()
         }
 
-        isiulangbinding.ubah.setOnClickListener {
-            isiulangbinding.seldepot.visibility = View.GONE
-            isiulangbinding.ubah.visibility = View.GONE
-            isiulangbinding.terdekat.visibility = View.VISIBLE
-        }
+
 //        if(TextUtils.isEmpty(lokasi)){
 //            total.visibility = View.INVISIBLE
 //        }

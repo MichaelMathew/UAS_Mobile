@@ -65,13 +65,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Ganti>"
-                    android:textColor="@color/blue"
-                    android:textSize="16sp" />
+
 
             </LinearLayout>
 
@@ -153,22 +147,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <EditText
-                        android:id="@+id/et_search"
-                        android:layout_width="106dp"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/orange"
-                        android:hint="Search"
-                        android:textSize="12sp" />
 
-                    <Button
-                        android:id="@+id/btn_search"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="@color/orange"
-
-                        android:text="cari"
-                        android:textSize="12sp" />
 
 
                 </LinearLayout>

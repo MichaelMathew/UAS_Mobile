@@ -66,26 +66,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/terdekat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Terdekat>"
-                    android:textColor="@color/blue"
-                    android:textSize="16sp"
-                    />
 
-                <TextView
-                    android:id="@+id/ubah"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textColor="@color/blue"
-                    android:text="Ubah>"
-                    android:textSize="16sp"
-                    android:visibility="gone"
-                     />
 
             </LinearLayout>
 
@@ -185,7 +166,7 @@
                             android:layout_marginRight="5dp"
                             android:layout_width="130dp"
                             android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
+                            app:srcCompat="@drawable/aida" />
 
                         <TextView
 
@@ -193,7 +174,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
+                            android:text="Depot Aida"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -212,7 +193,7 @@
                             android:layout_marginRight="5dp"
                             android:layout_width="130dp"
                             android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
+                            app:srcCompat="@drawable/dhirman" />
 
                         <TextView
 
@@ -220,7 +201,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
+                            android:text="Depot Dhirman"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -239,7 +220,7 @@
                             android:layout_marginRight="5dp"
                             android:layout_width="130dp"
                             android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
+                            app:srcCompat="@drawable/tirtasari" />
 
                         <TextView
 
@@ -247,7 +228,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
+                            android:text="Depot Tirta Sari"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
@@ -266,7 +247,7 @@
                             android:layout_marginRight="5dp"
                             android:layout_width="130dp"
                             android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
+                            app:srcCompat="@drawable/tirtaana" />
 
                         <TextView
 
@@ -274,7 +255,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
+                            android:text="Depot Tirta Ana"
                             android:textSize="12sp"
                             android:textStyle="bold" />
 
