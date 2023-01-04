@@ -85,7 +85,7 @@
                     android:text="Ubah>"
                     android:textSize="16sp"
                     android:visibility="gone"
-                     />
+                    />
 
             </LinearLayout>
 
@@ -131,159 +131,54 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <HorizontalScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="145dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="5dp"
-                tools:ignore="SpeakableTextPresentCheck">
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/custom_edit_text">
+
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:srcCompat="@drawable/lembata" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:id="@+id/depot1"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_depot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Depot Rizela"/>
 
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="Jalan Abc"/>
 
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image2"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image3"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image4"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image5"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="100 Meter"/>
 
                 </LinearLayout>
 
-
-            </HorizontalScrollView>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -453,11 +348,12 @@
 
                 <Button
                     android:id="@+id/total"
+                    android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:backgroundTint="@color/orange"
-                    android:text="Button"
+                    android:text="Total Pemesanan: Rp 0"
                     android:visibility="visible" />
             </LinearLayout>
 

@@ -1,6 +1,8 @@
 package com.michael.urgalon
 
 import android.R
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,6 +32,7 @@ class Home : Fragment() {
     var isianidis= 0
     var isivit = 0
     var isiron88 = 0
+    var hargaaqua = 16000
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,41 +82,86 @@ class Home : Fragment() {
 
             }
         }
-        homeBinding.minusaqua.setOnClickListener {
-            isiaqua--
-            homeBinding.jmlaqua.text = isiaqua.toString()
-        }
+
         homeBinding.plusaqua.setOnClickListener {
-            isiaqua++
-            homeBinding.jmlaqua.text = isiaqua.toString()
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
 
+
         homeBinding.minusanidis.setOnClickListener {
-            isianidis--
-            homeBinding.jmlanidis.text = isianidis.toString()
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
+
         }
         homeBinding.plusanidis.setOnClickListener {
-            isianidis++
-            homeBinding.jmlanidis.text = isianidis.toString()
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
 
         homeBinding.minusron88.setOnClickListener {
-            isiron88--
-            homeBinding.jmlron88.text = isiron88.toString()
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
         homeBinding.plusron88.setOnClickListener {
-            isiron88++
-            homeBinding.jmlron88.text = isiron88.toString()
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
 
         homeBinding.minusvit.setOnClickListener {
-            isivit--
-            homeBinding.jmlvit.text = isivit.toString()
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
         homeBinding.plusvit.setOnClickListener {
-            isivit++
-            homeBinding.jmlvit.text = isivit.toString()
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
+        homeBinding.image1.setOnClickListener {
+            val bundle = Bundle()
+            val depotsgalon:DepotSelectedGalon = DepotSelectedGalon.newInstance()
+            depotsgalon.arguments = bundle
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(com.michael.urgalon.R.id.frame1,depotsgalon)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
+
+
         val navbar= requireActivity().findViewById<FrameLayout>(com.michael.urgalon.R.id.bottomNavigationView)
         navbar.visibility = View.VISIBLE
         return homeBinding.root

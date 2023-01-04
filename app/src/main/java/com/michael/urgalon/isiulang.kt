@@ -1,5 +1,6 @@
 package com.michael.urgalon
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -77,24 +78,28 @@ class isiulang : Fragment() {
             }
         }
         isiulangbinding.isiminus.setOnClickListener {
-            isi--
-            isiulangbinding.jumlahisi.text = isi.toString()
-
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
         isiulangbinding.isiplus.setOnClickListener {
-            isi++
-            isiulangbinding.jumlahisi.text = isi.toString()
-
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Silahkan Pilih Depot Terlebih Dahulu")
+            builder.setPositiveButton("OK"
+            ) { p0, p1 -> p0.dismiss()
+            }
+            val alert = builder.create()
+            alert.show()
         }
         isiulangbinding.depot1.setOnClickListener{
-            isiulangbinding.logoseldepot.setImageResource(R.drawable.lembata)
-            isiulangbinding.horiscroll.visibility = View.GONE
-            isiulangbinding.seldepot.visibility = View.VISIBLE
-            isiulangbinding.ubah.visibility = View.VISIBLE
-            isiulangbinding.terdekat.visibility = View.GONE
+
         }
+
         isiulangbinding.ubah.setOnClickListener {
-            isiulangbinding.horiscroll.visibility = View.VISIBLE
             isiulangbinding.seldepot.visibility = View.GONE
             isiulangbinding.ubah.visibility = View.GONE
             isiulangbinding.terdekat.visibility = View.VISIBLE
