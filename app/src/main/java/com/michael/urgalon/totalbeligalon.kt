@@ -70,9 +70,6 @@ class totalbeligalon : Fragment() {
                 var metode = totalbeligalonBinding.spinbayar.selectedItem.toString()
                 if (metode == "E-Wallet") {
                     totalbeligalonBinding.kolomewallet.visibility = View.VISIBLE
-                    if (totalbeligalonBinding.etTujuan.text.toString() != ""){
-                        totalbeligalonBinding.totpemesanan.visibility = View.VISIBLE
-                    }
                 }
                 if (metode == "COD"){
                     totalbeligalonBinding.gopaytext.setTypeface(null,Typeface.NORMAL)
@@ -94,16 +91,25 @@ class totalbeligalon : Fragment() {
             totalbeligalonBinding.gopaytext.setTypeface(null,Typeface.BOLD)
             totalbeligalonBinding.shopeepaytext.setTypeface(null,Typeface.NORMAL)
             totalbeligalonBinding.ovotext.setTypeface(null,Typeface.NORMAL)
+            if (totalbeligalonBinding.etTujuan.text.toString() != ""){
+                totalbeligalonBinding.totpemesanan.visibility = View.VISIBLE
+            }
         }
         totalbeligalonBinding.ovoclick.setOnClickListener {
             totalbeligalonBinding.ovotext.setTypeface(null,Typeface.BOLD)
             totalbeligalonBinding.gopaytext.setTypeface(null,Typeface.NORMAL)
             totalbeligalonBinding.shopeepaytext.setTypeface(null,Typeface.NORMAL)
+            if (totalbeligalonBinding.etTujuan.text.toString() != ""){
+                totalbeligalonBinding.totpemesanan.visibility = View.VISIBLE
+            }
         }
         totalbeligalonBinding.shopeepayclick.setOnClickListener {
             totalbeligalonBinding.shopeepaytext.setTypeface(null,Typeface.BOLD)
             totalbeligalonBinding.gopaytext.setTypeface(null,Typeface.NORMAL)
             totalbeligalonBinding.ovotext.setTypeface(null,Typeface.NORMAL)
+            if (totalbeligalonBinding.etTujuan.text.toString() != ""){
+                totalbeligalonBinding.totpemesanan.visibility = View.VISIBLE
+            }
         }
         totalbeligalonBinding.totpemesanan.setOnClickListener {
             val bundle = Bundle()

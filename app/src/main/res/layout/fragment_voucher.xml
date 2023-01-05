@@ -211,7 +211,7 @@
                                 android:id="@+id/tv_diskonrp2"
                                 android:layout_width="170dp"
                                 android:layout_height="wrap_content"
-                                android:text="1000"
+                                android:text="2000"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -219,7 +219,7 @@
                                 android:id="@+id/tv_point2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20"
+                                android:text="25"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -296,7 +296,7 @@
                                 android:id="@+id/tv_diskonrp3"
                                 android:layout_width="170dp"
                                 android:layout_height="wrap_content"
-                                android:text="1000"
+                                android:text="3000"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -304,7 +304,7 @@
                                 android:id="@+id/tv_point3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20"
+                                android:text="30"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -381,7 +381,7 @@
                                 android:id="@+id/tv_diskonrp4"
                                 android:layout_width="170dp"
                                 android:layout_height="wrap_content"
-                                android:text="1000"
+                                android:text="4000"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -389,7 +389,7 @@
                                 android:id="@+id/tv_point4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20"
+                                android:text="35"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -466,7 +466,7 @@
                                 android:id="@+id/tv_diskonrp5"
                                 android:layout_width="170dp"
                                 android:layout_height="wrap_content"
-                                android:text="1000"
+                                android:text="5000"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -474,7 +474,7 @@
                                 android:id="@+id/tv_point5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20"
+                                android:text="40"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -551,7 +551,7 @@
                                 android:id="@+id/tv_diskonrp6"
                                 android:layout_width="170dp"
                                 android:layout_height="wrap_content"
-                                android:text="1000"
+                                android:text="6000"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -559,7 +559,7 @@
                                 android:id="@+id/tv_point6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20"
+                                android:text="45"
                                 android:textColor="@color/black"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 

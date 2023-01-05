@@ -70,13 +70,32 @@
                     android:text="Nama :"
                     android:textSize="14sp" />
 
-                <EditText
-                    android:id="@+id/et_nama"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/custom_edit_text" />
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="20sp"
+                    app:boxCornerRadiusBottomStart="20sp"
+                    app:boxCornerRadiusTopEnd="20sp"
+                    app:boxCornerRadiusTopStart="20sp"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="0dp"
+
+                    app:boxStrokeWidthFocused="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_edit_text"
+                        android:textAlignment="gravity"
+                        android:gravity= "top|start"
+                         />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
             </LinearLayout>
@@ -95,13 +114,32 @@
                     android:text="Alamat :"
                     android:textSize="14sp" />
 
-                <EditText
-                  android:id="@+id/et_alamat"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="61dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/custom_edit_text" />
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="20sp"
+                    app:boxCornerRadiusBottomStart="20sp"
+                    app:boxCornerRadiusTopEnd="20sp"
+                    app:boxCornerRadiusTopStart="20sp"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="0dp"
+
+                    app:boxStrokeWidthFocused="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_edit_text"
+                        android:textAlignment="gravity"
+                        android:gravity= "top|start"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
             </LinearLayout>
@@ -121,13 +159,32 @@
                     android:text="No HP :"
                     android:textSize="14sp" />
 
-                <EditText
-                    android:id="@+id/et_noHp"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/custom_edit_text" />
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="20sp"
+                    app:boxCornerRadiusBottomStart="20sp"
+                    app:boxCornerRadiusTopEnd="20sp"
+                    app:boxCornerRadiusTopStart="20sp"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="0dp"
+
+                    app:boxStrokeWidthFocused="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_noHP"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_edit_text"
+                        android:textAlignment="gravity"
+                        android:gravity= "top|start"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
             </LinearLayout>
