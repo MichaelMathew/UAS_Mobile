@@ -49,8 +49,8 @@ class HomeFragment : Fragment() {
 
         // Spinner Layanan
         val layanan = ArrayList<Layanan>()
-        layanan.add(Layanan("Beli Galon"))
-        layanan.add(Layanan("Isi ulang"))
+        layanan.add(Layanan(getString(com.michael.urgalon.R.string.spinbeligalon)))
+        layanan.add(Layanan(getString(com.michael.urgalon.R.string.spinisiulang)))
         val layananAdapter = activity?.let {
             ArrayAdapter(
                 it,

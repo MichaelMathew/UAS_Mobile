@@ -24,8 +24,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="List Voucher"
                 android:gravity="center"
+                android:text="@string/list_voucher"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -47,7 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Point Anda:"
+                    android:text="@string/point_anda"
                     android:textColor="@color/black"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium">
 
@@ -68,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:text="Point"
+                    android:text="@string/point"
                     android:textColor="@color/black"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium">
 

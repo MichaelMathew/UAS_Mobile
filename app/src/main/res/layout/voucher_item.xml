@@ -25,7 +25,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="16dp"
-            android:text="Diskon Rp."
+            android:text="@string/diskon_rp"
             android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="16dp"
-            android:text="Point"
+            android:text="@string/point1"
             android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -68,7 +68,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="25dp"
-            android:text="Berlaku hingga:"
+            android:text="@string/berlaku_hingga"
             android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -97,7 +97,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginLeft="95dp"
                 android:backgroundTint="#E69816"
-                android:text="Tukar" />
+                android:text="@string/tukar" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

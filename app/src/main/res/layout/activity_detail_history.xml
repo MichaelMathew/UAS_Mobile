@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Detail Riwayat"
+            android:text="@string/detail_riwayat"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Depot" />
+            android:text="@string/depot" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,14 +66,14 @@
                     android:id="@+id/tv_depot_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama Depot"
+                    android:text="@string/nama_depot"
                     android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_depot_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Alamat Depot" />
+                    android:text="@string/alamat_depot" />
 
             </LinearLayout>
 
@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Lokasi Tujuan" />
+            android:text="@string/lokasi_tujuan" />
 
 
         <TextView
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/custom_edit_text"
             android:gravity="top"
-            android:hint="Lokasi Tujuan"
+            android:hint="@string/lokasi_tujuan3"
             android:lines="4"
             android:padding="5dp"
             android:textSize="12dp" />
@@ -102,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Detail Pemesanan" />
+            android:text="@string/detail_pemesanan" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                     android:layout_width="109dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Aqua" />
+                    android:text="aqua" />
 
             </LinearLayout>
 
@@ -151,7 +151,7 @@
                     android:layout_width="109dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Metode Pembayaran" />
+                    android:text="@string/metode_pembayaran" />
 
                 <TextView
                     android:layout_width="63dp"
@@ -164,7 +164,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="COD" />
+                    android:text="@string/cod" />
 
 
             </LinearLayout>
@@ -192,7 +192,7 @@
                     android:layout_width="109dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Diskon" />
+                    android:text="@string/diskon" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -231,7 +231,7 @@
                     android:layout_width="109dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Total" />
+                    android:text="@string/total" />
 
                 <TextView
                     android:id="@+id/textView14"
@@ -243,9 +243,9 @@
                 <TextView
                     android:id="@+id/tv_totalharga"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Rp.xxxx" />
+                    android:text="@string/rp_xxxx" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Harga Satuan"
+                    android:text="@string/harga_satuan"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="10dp"
-                android:text="Lokasi Tujuan :"
+                android:text="@string/lokasi_tujuan2"
                 android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout

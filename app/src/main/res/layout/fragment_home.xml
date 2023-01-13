@@ -23,7 +23,7 @@
             android:id="@+id/tv_user_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selamat Datang"
+            android:text="@string/selamat_datang"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
@@ -31,7 +31,7 @@
             android:id="@+id/tv_point_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Point Anda: ##Point"
+            android:text="@string/point_anda_point"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
