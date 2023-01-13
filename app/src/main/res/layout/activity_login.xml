@@ -86,6 +86,13 @@
             android:text="Login"
             app:cornerRadius="20sp" />
 
+        <ImageView
+            android:id="@+id/logingoogle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/google" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -104,7 +111,7 @@
             android:id="@+id/tv_acc"
             android:layout_width="261dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:text="Don't have an account ?"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent" />
@@ -114,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:text="Sign Up"
             android:textColor="#2B54E7"
             app:layout_constraintStart_toStartOf="parent" />
