@@ -2,717 +2,149 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frame3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#2EB3DD"
-    tools:context=".Profile">
+    android:orientation="vertical"
+    tools:context=".fragment.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2EB3DD"
+        android:orientation="vertical"
+        android:padding="@dimen/app_value">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_user_home"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="15dp"
-                android:text="Selamat Datang"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:text="Point Anda: ##Point"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:layout_width="260dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="Depot"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-
-
-            </LinearLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="145dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="5dp"
-                tools:ignore="SpeakableTextPresentCheck">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:id="@+id/image1"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image2"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/aida" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Aida"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image3"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/dhirman" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Dhirman"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image4"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/tirtasari" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Tirta Sari"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image5"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/tirtaana" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Tirta Ana"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </HorizontalScrollView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/spinlayanan"
-                    android:layout_width="171dp"
-                    android:layout_height="40dp"
-
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/custom_edit_text"
-                    android:entries="@array/layanan"
-
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <LinearLayout
-                    android:id="@+id/line1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="60dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="@drawable/custom_edit_text">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="326dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="204dp"
-                            android:layout_height="match_parent"
-
-                            android:layout_marginRight="10dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="146dp"
-                                android:layout_weight="1"
-                                android:layout_marginLeft="5dp"
-                                android:src="@drawable/aqua" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:text="Aqua"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="Rp.16000"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="31dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <Button
-                                    android:id="@+id/minusaqua"
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:backgroundTint="@color/orange"
-                                    android:text="-"
-                                    app:cornerRadius="10sp" />
-
-                                <TextView
-                                    android:id="@+id/jmlaqua"
-                                    android:layout_width="48dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:text="0"
-                                    android:textAlignment="center" />
-
-                                <Button
-                                    android:id="@+id/plusaqua"
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="@color/orange"
-                                    android:text="+"
-                                    app:cornerRadius="10sp" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="203dp"
-                            android:layout_height="match_parent"
-
-
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="146dp"
-                                android:layout_weight="1"
-                                android:layout_marginRight="5dp"
-                                android:src="@drawable/crystalline" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:text="Crystaline"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="Rp.25000"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="31dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <Button
-                                    android:id="@+id/minuscrystaline"
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:backgroundTint="@color/orange"
-                                    android:text="-"
-                                    app:cornerRadius="10sp" />
-
-                                <TextView
-                                    android:id="@+id/jmlcrystaline"
-                                    android:layout_width="48dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:text="0"
-                                    android:textAlignment="center" />
-
-                                <Button
-                                    android:id="@+id/pluscrystaline"
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="@color/orange"
-                                    android:text="+"
-                                    app:cornerRadius="10sp" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="275dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="204dp"
-                            android:layout_height="match_parent"
-
-                            android:layout_marginRight="10dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="146dp"
-                                android:layout_weight="1"
-                                android:src="@drawable/ron88" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:text="RON88"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="Rp.16000"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="31dp"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <Button
-                                    android:id="@+id/minusron88"
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:backgroundTint="@color/orange"
-                                    android:text="-"
-                                    app:cornerRadius="10sp" />
-
-                                <TextView
-                                    android:id="@+id/jmlron88"
-
-                                    android:layout_width="48dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:text="0"
-                                    android:textAlignment="center" />
-
-                                <Button
-                                    android:id="@+id/plusron88"
-
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="@color/orange"
-                                    android:text="+"
-                                    app:cornerRadius="10sp" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="203dp"
-                            android:layout_height="match_parent"
-
-
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="146dp"
-                                android:layout_weight="1"
-                                android:src="@drawable/pristine" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:text="Pristine"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="Rp.16000"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="31dp"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <Button
-                                    android:id="@+id/minuspristine"
-
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:backgroundTint="@color/orange"
-                                    android:text="-"
-                                    app:cornerRadius="10sp" />
-
-                                <TextView
-                                    android:id="@+id/jmlpristine"
-
-                                    android:layout_width="48dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:text="0"
-                                    android:textAlignment="center" />
-
-                                <Button
-                                    android:id="@+id/pluspristine"
-
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="@color/orange"
-                                    android:text="+"
-                                    app:cornerRadius="10sp" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="270dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="204dp"
-                            android:layout_height="match_parent"
-
-                            android:layout_marginRight="10dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="146dp"
-                                android:layout_weight="1"
-                                android:src="@drawable/purelife" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:text="Purelife"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="Rp.16000"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="31dp"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <Button
-
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:backgroundTint="@color/orange"
-                                    android:text="-"
-                                    app:cornerRadius="10sp" />
-
-                                <TextView
-
-                                    android:layout_width="48dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:text="0"
-                                    android:textAlignment="center" />
-
-                                <Button
-
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="@color/orange"
-                                    android:text="+"
-                                    app:cornerRadius="10sp" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="203dp"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="146dp"
-                                android:layout_weight="1"
-                                android:src="@drawable/total8" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="15dp"
-                                android:text="Total 8"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="Rp.16000"
-                                android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14sp" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="31dp"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <Button
-
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-
-                                    android:backgroundTint="@color/orange"
-                                    android:text="-"
-                                    app:cornerRadius="10sp" />
-
-                                <TextView
-
-                                    android:layout_width="48dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:text="0"
-                                    android:textAlignment="center" />
-
-                                <Button
-
-                                    android:layout_width="51dp"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="@color/orange"
-                                    android:text="+"
-                                    app:cornerRadius="10sp" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </ScrollView>
-
-
-        </LinearLayout>
+            android:text="Selamat Datang"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_point_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Point Anda: ##Point"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depot"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_depot_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/depot_item" />
+
+            <LinearLayout
+                android:id="@+id/selected_depot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edit_text"
+                android:visibility="gone"
+                android:padding="@dimen/app_value"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_depot_item"
+                    app:srcCompat="@drawable/lembata"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_depot_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Depot Rizela" />
+
+                    <TextView
+                        android:id="@+id/tv_depot_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jalan Abc" />
+
+                    <TextView
+                        android:id="@+id/tv_depot_jarak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100 Meter" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <Spinner
+            android:id="@+id/spinlayanan"
+            android:layout_width="171dp"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_edit_text"
+            android:entries="@array/layanan"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edit_text"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_submit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="Total Pemesanan : Rp 0"
+        app:cornerRadius="5sp"/>
+
 </FrameLayout>

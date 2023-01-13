@@ -9,7 +9,9 @@ import com.michael.urgalon.R
 import com.michael.urgalon.databinding.HistoryItemBinding
 import com.michael.urgalon.entity.HistoryPemesanan
 
-class HistoryAdapter(val historys: ArrayList<HistoryPemesanan>) : Adapter<HistoryAdapter.HistoryViewHolder>() {
+class HistoryAdapter(private val historys: ArrayList<HistoryPemesanan>) : Adapter<HistoryAdapter.HistoryViewHolder>() {
+
+    private lateinit var listener: HistoryListener
 
     inner class HistoryViewHolder(itemView: View) : ViewHolder(itemView) {
         private lateinit var binding: HistoryItemBinding
@@ -17,7 +19,7 @@ class HistoryAdapter(val historys: ArrayList<HistoryPemesanan>) : Adapter<Histor
             binding = HistoryItemBinding.bind(itemView)
         }
         fun setHistoryData(history: HistoryPemesanan){
-            binding.tvDepotname.text = history.depot
+            binding.tvDepotname.text = history.depot?.nama_depot
             binding.tvDatehistory.text = history.date.toString()
             binding.tvPemesanan.text = history.pesanan
             binding.tvTotal.text = "Total"
@@ -33,9 +35,18 @@ class HistoryAdapter(val historys: ArrayList<HistoryPemesanan>) : Adapter<Histor
 
     override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
         holder.setHistoryData(historys[position])
+        holder.itemView.setOnClickListener { listener.onClick(historys[position]) }
     }
 
     override fun getItemCount(): Int {
         return historys.size
+    }
+
+    fun setListener(historyListener: HistoryListener) {
+        listener = historyListener
+    }
+
+    interface HistoryListener {
+        fun onClick(history: HistoryPemesanan)
     }
 }

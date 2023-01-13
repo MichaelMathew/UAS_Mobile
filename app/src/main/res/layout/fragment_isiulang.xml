@@ -4,437 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameisiulang"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#2EB3DD"
-    android:visibility="visible"
-    tools:context=".Profile">
+    android:layout_height="wrap_content"
+    tools:context=".fragment.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edit_text"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="15dp"
-                android:text="Selamat Datang"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
                 android:layout_marginTop="10dp"
-                android:text="Point Anda: ##Point"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_image"
+                android:src="@drawable/isiulang"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Harga Satuan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Rp.8000"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/isiminus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/orange"
+                    android:text="-"
+                    app:cornerRadius="10sp" />
+
+                <TextView
+                    android:id="@+id/jumlahisi"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/isiplus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/orange"
+                    android:text="+"
+                    android:layout_marginTop="10dp"
+                    app:cornerRadius="10sp" />
+            </LinearLayout>
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-
-            android:background="@color/white"
+            android:layout_height="179dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="10dp">
+                android:layout_marginTop="10dp"
+                android:text="Lokasi Tujuan :"
+                android:textSize="14sp" />
 
-                <TextView
-                    android:layout_width="260dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginTop="15dp"
-                    android:text="Depot"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/seldepot"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:layout_height="137dp"
+                android:layout_marginBottom="30dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="20sp"
+                app:boxCornerRadiusBottomStart="20sp"
+                app:boxCornerRadiusTopEnd="20sp"
+                app:boxCornerRadiusTopStart="20sp"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
 
-                <ImageView
-                    android:id="@+id/logoseldepot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_launcher_foreground" />
-
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_lokasi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/namadepot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/alamatdepot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/jarakdepot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="145dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="5dp"
-                tools:ignore="SpeakableTextPresentCheck">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:id="@+id/depot1"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/lembata" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Rizela"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image2"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/aida" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Aida"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image3"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/dhirman" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Dhirman"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image4"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/tirtasari" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Tirta Sari"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/image5"
-                        android:layout_width="140dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/custom_edit_text"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_width="130dp"
-                            android:layout_height="110dp"
-                            app:srcCompat="@drawable/tirtaana" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:text="Depot Tirta Ana"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </HorizontalScrollView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/spinlayanan"
-                    android:layout_width="171dp"
-                    android:layout_height="40dp"
-
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/custom_edit_text"
-                    android:entries="@array/layanan"
-
-
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="297dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/custom_edit_text"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="110dp"
-                        android:layout_height="90dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/border_image"
-                        android:src="@drawable/isiulang"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="15dp"
-                            android:text="Harga Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Rp.8000"
-                            android:textColor="@color/black"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/isiminus"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="10dp"
-                            android:backgroundTint="@color/orange"
-                            android:text="-"
-                            app:cornerRadius="10sp" />
-
-                        <TextView
-                            android:id="@+id/jumlahisi"
-                            android:layout_width="48dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="10dp"
-                            android:text="0"
-                            android:textAlignment="center" />
-
-                        <Button
-                            android:id="@+id/isiplus"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:backgroundTint="@color/orange"
-                            android:text="+"
-                            android:layout_marginTop="10dp"
-                            app:cornerRadius="10sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="179dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Lokasi Tujuan :"
-                        android:textSize="14sp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="137dp"
-                        android:layout_marginBottom="30dp"
-                        app:boxBackgroundColor="@color/white"
-                        app:boxCornerRadiusBottomEnd="20sp"
-                        app:boxCornerRadiusBottomStart="20sp"
-                        app:boxCornerRadiusTopEnd="20sp"
-                        app:boxCornerRadiusTopStart="20sp"
-                        app:boxStrokeColor="@color/white"
-                        app:boxStrokeWidth="0dp"
-                        app:boxStrokeWidthFocused="0dp">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/et_lokasi"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="10dp"
-                            android:textAlignment="gravity"
-                            android:gravity="top|start"
-                            android:background="@drawable/custom_edit_text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <!--                    <EditText-->
-                    <!--                        android:id="@+id/et_alamat"-->
-                    <!--                        android:layout_width="match_parent"-->
-                    <!--                        android:layout_height="125dp"-->
-                    <!--                        android:layout_marginLeft="15dp"-->
-                    <!--                        android:layout_marginTop="10dp"-->
-                    <!--                        android:layout_marginRight="15dp"-->
-
-                    <!--                        android:background="@drawable/custom_edit_text" />-->
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="gravity"
+                    android:gravity="top|start"
+                    android:background="@drawable/custom_edit_text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 

@@ -1,154 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frametotalbeligalon"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2EB3DD"
-    android:visibility="visible"
-    tools:context=".Profile">
+    android:orientation="vertical"
+    tools:context=".PemesananActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="#2EB3DD"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Pemesanan"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/backtobeligalon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="105dp"
-                android:layout_marginTop="20dp"
-                android:text="Pemesanan"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-
-                android:textStyle="bold" />
-
-        </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-
-            android:background="@color/white"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/app_value">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_marginTop="20dp"
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lokasi Tujuan" />
 
-                <LinearLayout
-                    android:layout_marginTop="10dp"
+                <EditText
+                    android:id="@+id/et_tujuan"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/custom_edit_text"
-                    android:orientation="vertical">
+                    android:gravity="top"
+                    android:hint="Lokasi Tujuan"
+                    android:lines="5"
+                    android:padding="10dp"
+                    android:textSize="12dp">
 
-                    <EditText
-                        android:id="@+id/et_tujuan"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Lokasi Tujuan"
-                        android:textSize="12dp"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="top">
-
-                    </EditText>
-                </LinearLayout>
+                </EditText>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:text="Detail Pemesanan" />
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/custom_edit_text"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                    <LinearLayout
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_galon_pemesanan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginBottom="25dp"
-                        android:layout_marginRight="20dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/merkgalon"
-                            android:layout_width="109dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Aqua" />
-
-                        <TextView
-                            android:id="@+id/jmlisi"
-                            android:layout_width="63dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="xx" />
-
-                        <TextView
-                            android:id="@+id/jmlharga"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Rp.xxxx" />
-                    </LinearLayout>
+                        tools:itemCount="3"
+                        tools:listitem="@layout/pemesanan_galon_item"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginVertical="10dp"
                         android:background="#E69816" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -166,7 +121,7 @@
                             android:text=" " />
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/btn_voucher"
                             android:layout_width="100dp"
                             android:layout_height="40dp"
                             android:backgroundTint="@color/orange"
@@ -177,10 +132,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="20dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -203,22 +155,16 @@
                             android:layout_height="34dp"
                             android:background="@drawable/custom_edit_text"
                             android:entries="@array/layanan"
-
-
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/kolomewallet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
                         android:layout_marginBottom="20dp"
-                        android:layout_marginRight="20dp"
                         android:orientation="horizontal"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <LinearLayout
                             android:id="@+id/gopayclick"
@@ -230,8 +176,8 @@
                             <ImageView
                                 android:id="@+id/imageView5"
                                 android:layout_width="40dp"
-                                android:layout_marginLeft="30dp"
                                 android:layout_height="50dp"
+                                android:layout_marginLeft="30dp"
                                 android:layout_weight="1"
                                 android:src="@drawable/gopay" />
 
@@ -240,10 +186,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="Gopay"/>
+                                android:text="Gopay" />
 
                         </LinearLayout>
-
 
 
                         <LinearLayout
@@ -265,7 +210,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="OVO"/>
+                                android:text="OVO" />
 
                         </LinearLayout>
 
@@ -288,7 +233,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="ShopeePay"/>
+                                android:text="ShopeePay" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -297,19 +242,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:background="#E69816" />
-
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="20dp"
-                        android:layout_marginRight="20dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -338,16 +278,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:background="#E69816" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:orientation="horizontal">
 
@@ -373,6 +309,7 @@
                             android:text="Rp.xxxx" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <Button
                     android:id="@+id/totpemesanan"
                     android:layout_width="match_parent"
@@ -380,10 +317,9 @@
                     android:layout_marginTop="10dp"
                     android:backgroundTint="@color/orange"
                     android:text="Total Pemesanan: "
-                    android:visibility="invisible"
+                    android:visibility="visible"
                     app:cornerRadius="10dp" />
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-
-</FrameLayout>
+    </ScrollView>
+</LinearLayout>

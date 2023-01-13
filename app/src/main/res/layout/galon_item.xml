@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_galon_item"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:src="@drawable/aqua" />
+
+    <TextView
+        android:id="@+id/tv_name_galon_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Aqua"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_price_galon_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Rp.16000"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_minus"
+            app:cornerRadius="10sp"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tv_amount_galon_item"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_plus"
+            app:cornerRadius="10sp"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="+" />
+    </LinearLayout>
+</LinearLayout>
