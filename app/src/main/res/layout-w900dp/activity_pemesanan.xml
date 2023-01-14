@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PemesananActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2EB3DD"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/pemesanan"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/app_value">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_edit_text"
+                android:padding="@dimen/app_value"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/app_title"
+                    android:text="@string/lokasi_tujuan1" />
+
+                <EditText
+                    android:id="@+id/et_tujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:gravity="top"
+                    android:hint="@string/lokasi_tujuan5"
+                    android:lines="12"
+                    android:padding="10dp"
+                    android:textSize="20sp">
+
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="20dp"
+                    android:background="#E69816" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/app_subtitle"
+                        android:text="@string/voucher" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="63dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=" " />
+
+                    <Button
+                        android:id="@+id/btn_voucher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:text="Voucher"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/app_subtitle"
+                        android:layout_weight="1"
+                        android:text="@string/metode_pembayaran1" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="63dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=" " />
+
+                    <Spinner
+                        android:id="@+id/spinbayar"
+                        android:layout_width="100dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/custom_edit_text"
+                        android:entries="@array/layanan"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/kolomewallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/gopayclick"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gopay" />
+
+                        <TextView
+                            android:id="@+id/gopaytext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Gopay" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ovoclick"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ovo" />
+
+                        <TextView
+                            android:id="@+id/ovotext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="OVO" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shopeepayclick"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/shopee" />
+
+                        <TextView
+                            android:id="@+id/shopeepaytext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="ShopeePay" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="@dimen/app_title"
+                    android:text="@string/detail_pemesanan1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_galon_pemesanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/pemesanan_galon_item"/>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#E69816" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="109dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/app_subtitle"
+                            android:layout_weight="1"
+                            android:text="@string/diskon1" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="63dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/jmldiskon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/app_subtitle"
+                            android:text="-" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#E69816" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="109dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/app_subtitle"
+                            android:text="@string/total1" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="63dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_totalharga"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/app_subtitle"
+                            android:text="Rp.xxxx" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/totpemesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/orange"
+                    android:text="@string/total_pemesanan"
+                    android:visibility="visible"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
