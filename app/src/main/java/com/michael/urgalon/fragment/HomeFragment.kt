@@ -199,7 +199,7 @@ class HomeFragment : Fragment() {
         Glide.with(requireActivity()).load(imagesRef).into(homeBinding.ivDepotItem)
         homeBinding.tvDepotName.text = depot.nama_depot
         homeBinding.tvDepotAddress.text = depot.alamat_depot
-        homeBinding.tvDepotJarak.text = depot.jarak_depot.toString()
+        homeBinding.tvDepotJarak.text = depot.jarak_depot.toString() + " KM"
     }
 
     companion object {

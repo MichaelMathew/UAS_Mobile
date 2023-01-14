@@ -114,7 +114,7 @@ class PemesananActivity : AppCompatActivity() {
 
         pemesananBinding.jmldiskon.text = "Rp. ${diskon}"
         pemesananBinding.tvTotalharga.text = "Rp. ${checkTotal() - diskon}"
-        pemesananBinding.totpemesanan.text = "Rp. ${checkTotal() - diskon}"
+        pemesananBinding.totpemesanan.text = "Total Pesanan Rp. ${checkTotal() - diskon}"
 
         pemesananBinding.totpemesanan.setOnClickListener {
             val newHistory = HistoryPemesanan()
@@ -144,7 +144,7 @@ class PemesananActivity : AppCompatActivity() {
             diskonPoint = viewModel.selectedVoucher?.point_voucher ?: 0
             pemesananBinding.jmldiskon.text = "Rp. ${diskon}"
             pemesananBinding.tvTotalharga.text = "Rp. ${checkTotal() - diskon}"
-            pemesananBinding.totpemesanan.text = "Rp. ${checkTotal() - diskon}"
+            pemesananBinding.totpemesanan.text = "Total Pesanan Rp. ${checkTotal() - diskon}"
         } else {
             super.onBackPressed()
         }

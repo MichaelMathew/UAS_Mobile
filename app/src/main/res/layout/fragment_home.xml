@@ -163,7 +163,7 @@
         android:backgroundTint="@color/orange"
         android:textColor="@color/white"
         android:textAlignment="center"
-        android:text="Total Pemesanan : Rp 0"
+        android:text="@string/pesan"
         app:cornerRadius="5sp"/>
 
 </FrameLayout>
