@@ -72,4 +72,8 @@
     <string name="spinbeligalon">Buy Gallon</string>
     <string name="spinisiulang">Refill</string>
     <string name="change">Change</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="voucher1">Voucher</string>
+    <string name="profile">Profile</string>
 </resources>

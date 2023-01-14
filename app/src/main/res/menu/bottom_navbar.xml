@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Home"
+    <item android:title="@string/home"
         android:id="@+id/bottom_home"
         android:icon="@drawable/ic_baseline_home_24"/>
-    <item android:title="History"
+    <item android:title="@string/history"
         android:id="@+id/bottom_history"
         android:icon="@drawable/ic_baseline_history_24"/>
-    <item android:title="Voucher"
+    <item android:title="@string/voucher1"
         android:id="@+id/bottom_voucher"
         android:icon="@drawable/ic_baseline_discount_24"/>
-    <item android:title="Profile"
+    <item android:title="@string/profile"
         android:id="@+id/bottom_profile"
         android:icon="@drawable/ic_baseline_person_24"/>
 </menu>

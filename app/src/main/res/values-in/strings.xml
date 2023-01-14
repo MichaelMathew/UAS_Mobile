@@ -72,4 +72,8 @@
     <string name="spinbeligalon">Beli Galon</string>
     <string name="spinisiulang">Isi Ulang</string>
     <string name="change">Ubah</string>
+    <string name="home">Beranda</string>
+    <string name="history">Riwayat</string>
+    <string name="voucher1">Voucher</string>
+    <string name="profile">Profil</string>
 </resources>
