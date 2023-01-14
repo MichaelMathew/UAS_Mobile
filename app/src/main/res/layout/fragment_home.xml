@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:orientation="vertical">
 
     <LinearLayout
@@ -42,12 +43,30 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Depot"
+            android:padding="@dimen/app_value"
+            android:text="@string/depot"
+            android:layout_weight="1"
             android:textColor="@color/black"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_change_depot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/app_value"
+            android:text="@string/change"
+            android:visibility="gone"
+            android:textColor="#2EB3DD"
+            android:textSize="16sp" />
+
+        </LinearLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -73,7 +92,6 @@
 
                 <ImageView
                     android:id="@+id/iv_depot_item"
-                    app:srcCompat="@drawable/lembata"
                     android:layout_width="120dp"
                     android:layout_height="120dp" />
 
@@ -112,6 +130,7 @@
             android:id="@+id/spinlayanan"
             android:layout_width="171dp"
             android:layout_height="40dp"
+            android:layout_margin="@dimen/app_value"
             android:background="@drawable/custom_edit_text"
             android:entries="@array/layanan"
             android:textSize="16sp"

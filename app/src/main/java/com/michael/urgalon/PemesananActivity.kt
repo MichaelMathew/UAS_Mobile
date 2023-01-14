@@ -17,6 +17,7 @@ import com.michael.urgalon.adapter.PemesananGalonAdapter
 import com.michael.urgalon.databinding.ActivityPemesananBinding
 import com.michael.urgalon.entity.*
 import com.michael.urgalon.fragment.HistoryFragment.Companion.HISTORY_REF
+import com.michael.urgalon.fragment.VoucherFragment
 import com.michael.urgalon.viewmodel.PemesananViewModel
 import java.text.SimpleDateFormat
 import java.util.*
@@ -27,6 +28,8 @@ class PemesananActivity : AppCompatActivity() {
     private lateinit var pemesananBinding: ActivityPemesananBinding
     private lateinit var galons: ArrayList<Galon>
     private lateinit var galonsAmount: ArrayList<Int>
+    private var diskon: Int = 0
+    private var diskonPoint: Int = 0
     private val viewModel: PemesananViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,16 +42,17 @@ class PemesananActivity : AppCompatActivity() {
 
         var depot: Depot? = null
         var type: Int?
-        var diskon = 0
-        var diskonPoint = 0
+        diskon = 0
+        diskonPoint = 0
         var currentPoint = 0
 
         intent.extras?.let {
             depot = it.getParcelable<Depot>("DEPOT")
             type = it.getInt("TYPE")
             currentPoint = it.getInt("POINT")
-            diskon = it.getParcelable<Voucher>("VOUCHER")?.diskon_voucher ?: 0
-            diskonPoint = it.getParcelable<Voucher>("VOUCHER")?.point_voucher ?: 0
+            viewModel.selectedVoucher = it.getParcelable("VOUCHER")
+            diskon = viewModel.selectedVoucher?.diskon_voucher ?: 0
+            diskonPoint = viewModel.selectedVoucher?.point_voucher ?: 0
             galons = it.getParcelableArrayList<Galon>("GALON") as ArrayList<Galon>
             galonsAmount = it.getIntegerArrayList("GALON-AMOUNT") as ArrayList<Int>
         }
@@ -57,7 +61,12 @@ class PemesananActivity : AppCompatActivity() {
         pemesananBinding.rvGalonPemesanan.layoutManager = LinearLayoutManager(this)
 
         pemesananBinding.btnVoucher.setOnClickListener {
-            // to voucher
+            val fragmentManager = supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(pemesananBinding.containerVoucher.id, VoucherFragment.newInstance())
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+            pemesananBinding.containerVoucher.visibility = View.VISIBLE
         }
 
         val bayar = ArrayList<Metodebayar>()
@@ -102,7 +111,7 @@ class PemesananActivity : AppCompatActivity() {
             checkMetodeBayar()
         }
 
-        pemesananBinding.jmldiskon.text = "Rp. $diskon"
+        pemesananBinding.jmldiskon.text = "Rp. ${diskon}"
         pemesananBinding.tvTotalharga.text = "Rp. ${checkTotal() - diskon}"
         pemesananBinding.totpemesanan.text = "Rp. ${checkTotal() - diskon}"
 
@@ -124,6 +133,19 @@ class PemesananActivity : AppCompatActivity() {
             newHistory.totalharga = checkTotal()
             newHistory.lokasi = pemesananBinding.etTujuan.text.toString()
             saveData(newHistory, currentPoint, diskonPoint)
+        }
+    }
+
+    override fun onBackPressed() {
+        if (pemesananBinding.containerVoucher.visibility == View.VISIBLE) {
+            pemesananBinding.containerVoucher.visibility = View.GONE
+            diskon = viewModel.selectedVoucher?.diskon_voucher ?: 0
+            diskonPoint = viewModel.selectedVoucher?.point_voucher ?: 0
+            pemesananBinding.jmldiskon.text = "Rp. ${diskon}"
+            pemesananBinding.tvTotalharga.text = "Rp. ${checkTotal() - diskon}"
+            pemesananBinding.totpemesanan.text = "Rp. ${checkTotal() - diskon}"
+        } else {
+            super.onBackPressed()
         }
     }
 

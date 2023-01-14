@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.michael.urgalon.HomeActivity
+import com.michael.urgalon.PemesananActivity
 import com.michael.urgalon.R
 import com.michael.urgalon.adapter.VoucherAdapter
 import com.michael.urgalon.api.ApiClient
@@ -17,6 +18,8 @@ import com.michael.urgalon.api.ApiService
 import com.michael.urgalon.databinding.FragmentVoucherBinding
 import com.michael.urgalon.entity.Voucher
 import com.michael.urgalon.viewmodel.HomeViewModel
+import com.michael.urgalon.viewmodel.MainViewModel
+import com.michael.urgalon.viewmodel.PemesananViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,7 +29,9 @@ class VoucherFragment : Fragment() {
     private lateinit var vouchers: ArrayList<Voucher>
     private lateinit var voucherAdapter: VoucherAdapter
     private lateinit var api: ApiService
+    private val viewModel: MainViewModel by activityViewModels()
     private val homeVM: HomeViewModel by activityViewModels()
+    private val pemesananVM: PemesananViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +41,23 @@ class VoucherFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         voucherBinding = FragmentVoucherBinding.inflate(inflater, container, false)
         vouchers = ArrayList()
+        viewModel.vouchers.observe(viewLifecycleOwner) {
+            vouchers.clear()
+            vouchers.addAll(it)
+            voucherAdapter.notifyItemChanged(0)
+        }
         voucherAdapter = VoucherAdapter(vouchers)
         voucherAdapter.setListener(object : VoucherAdapter.VoucherListener {
             override fun onClick(voucher: Voucher) {
                 if (homeVM.loggedUser.value!!.point!! >= voucher.point_voucher) {
-                    homeVM.selectedVoucher = voucher
                     Toast.makeText(context, "Voucher terpilih", Toast.LENGTH_LONG).show()
-                    (activity as HomeActivity).changeBottomNav()
+                    homeVM.selectedVoucher = voucher
+                    pemesananVM.selectedVoucher = voucher
+                    if (activity is HomeActivity) {
+                        (activity as HomeActivity).changeBottomNav(R.id.bottom_home)
+                    } else if (activity is PemesananActivity) {
+                        requireActivity().onBackPressed()
+                    }
                 } else {
                     Toast.makeText(context, "Point tidak mencukupi", Toast.LENGTH_LONG).show()
                 }
@@ -60,7 +75,7 @@ class VoucherFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        fetchVouchers()
+//        fetchVouchers()
     }
 
     private fun fetchVouchers() {

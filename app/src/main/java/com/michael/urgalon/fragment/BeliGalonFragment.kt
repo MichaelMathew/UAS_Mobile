@@ -19,6 +19,7 @@ import com.michael.urgalon.databinding.FragmentBeliGalonBinding
 import com.michael.urgalon.entity.Depot
 import com.michael.urgalon.entity.Galon
 import com.michael.urgalon.viewmodel.HomeViewModel
+import com.michael.urgalon.viewmodel.MainViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,6 +29,7 @@ class BeliGalonFragment : Fragment() {
     private lateinit var galons: ArrayList<Galon>
     private lateinit var galonAdapter: HomeGalonAdapter
     private lateinit var api: ApiService
+    private val viewModel: MainViewModel by activityViewModels()
     private val homeVM: HomeViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +41,11 @@ class BeliGalonFragment : Fragment() {
         beliGalonBinding = FragmentBeliGalonBinding.inflate(inflater, container, false)
 
         galons = ArrayList()
+        viewModel.galons.observe(viewLifecycleOwner) {
+            galons.clear()
+            galons.addAll(it)
+            galonAdapter.notifyItemChanged(0)
+        }
         galonAdapter = HomeGalonAdapter(galons)
         galonAdapter.setListener(object : HomeGalonAdapter.HomeGalonListener {
             override fun onTambah(galon: Galon, jumlah: Int) {
@@ -63,7 +70,7 @@ class BeliGalonFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        fetchGalons()
+//        fetchGalons()
     }
 
     private fun fetchGalons() {

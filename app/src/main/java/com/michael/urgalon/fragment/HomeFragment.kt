@@ -20,6 +20,10 @@ import com.michael.urgalon.viewmodel.MainViewModel
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
 import com.michael.urgalon.HomeActivity
 import com.michael.urgalon.PemesananActivity
 import com.michael.urgalon.api.ApiClient
@@ -84,6 +88,11 @@ class HomeFragment : Fragment() {
 
         // Recyclerview Depot
         depots = ArrayList()
+        viewModel.depots.observe(viewLifecycleOwner) {
+            depots.clear()
+            depots.addAll(it)
+            depotAdapter.notifyItemChanged(0)
+        }
         depotAdapter = HomeDepotAdapter(depots)
         depotAdapter.setListener(object : HomeDepotAdapter.HomeDepotListener {
             override fun onClick(depot: Depot) {
@@ -92,10 +101,18 @@ class HomeFragment : Fragment() {
                 homeVM.checkFab()
                 homeBinding.selectedDepot.visibility = View.VISIBLE
                 homeBinding.rvDepotHome.visibility = View.GONE
+                homeBinding.tvChangeDepot.visibility = View.VISIBLE
             }
         })
         homeBinding.rvDepotHome.adapter = depotAdapter
         homeBinding.rvDepotHome.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        homeBinding.tvChangeDepot.setOnClickListener {
+            homeVM.selectedDepot = null
+            homeVM.checkFab()
+            homeBinding.selectedDepot.visibility = View.GONE
+            homeBinding.rvDepotHome.visibility = View.VISIBLE
+            homeBinding.tvChangeDepot.visibility = View.GONE
+        }
 
         // FAB
         homeBinding.fabSubmit.visibility = View.GONE
@@ -142,7 +159,7 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        fetchDepots()
+//        fetchDepots()
         homeBinding.spinlayanan.setSelection(0,false)
         homeVM.selectedDepot = null
         homeBinding.selectedDepot.visibility = View.GONE
@@ -176,7 +193,10 @@ class HomeFragment : Fragment() {
 
     private fun setSelectedDepot(depot: Depot) {
         selectedDepot = depot
-        homeBinding.ivDepotItem.setImageURI(Uri.parse(depot.image_depot))
+        val storage = Firebase.storage("gs://tubesmobile-13f1f.appspot.com")
+        val storageRef = storage.reference
+        val imagesRef = storageRef.child("Depot/${depot.image_depot}")
+        Glide.with(requireActivity()).load(imagesRef).into(homeBinding.ivDepotItem)
         homeBinding.tvDepotName.text = depot.nama_depot
         homeBinding.tvDepotAddress.text = depot.alamat_depot
         homeBinding.tvDepotJarak.text = depot.jarak_depot.toString()

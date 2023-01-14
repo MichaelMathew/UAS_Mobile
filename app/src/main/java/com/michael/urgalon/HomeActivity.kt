@@ -53,7 +53,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    fun changeBottomNav() {
-        binding.bottomNavigationView.selectedItemId = R.id.bottom_home
+    fun changeBottomNav(id: Int) {
+        binding.bottomNavigationView.selectedItemId = id
     }
 }

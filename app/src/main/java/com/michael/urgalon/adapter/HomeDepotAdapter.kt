@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import com.michael.urgalon.R
 import com.michael.urgalon.databinding.DepotItemBinding
 import com.michael.urgalon.databinding.HistoryItemBinding
@@ -17,12 +20,15 @@ class HomeDepotAdapter(private val depots : ArrayList<Depot>) : Adapter<HomeDepo
     private lateinit var listener: HomeDepotListener
     inner class HomeDepotViewHolder(itemView: View) : ViewHolder(itemView) {
         private var binding: DepotItemBinding
+        private val storage = Firebase.storage("gs://tubesmobile-13f1f.appspot.com")
+        private val storageRef = storage.reference
         init {
             binding = DepotItemBinding.bind(itemView)
         }
         fun setData(depot: Depot) {
-            binding.ivDepotItem.setImageURI(Uri.parse(depot.image_depot))
             binding.tvDepotItem.text = depot.nama_depot
+            val imagesRef = storageRef.child("Depot/${depot.image_depot}")
+            Glide.with(itemView).load(imagesRef).into(binding.ivDepotItem)
         }
     }
 

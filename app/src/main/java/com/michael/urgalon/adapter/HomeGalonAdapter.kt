@@ -5,6 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import com.michael.urgalon.R
 import com.michael.urgalon.databinding.DepotItemBinding
 import com.michael.urgalon.databinding.GalonItemBinding
@@ -15,13 +18,16 @@ class HomeGalonAdapter(private val galons : ArrayList<Galon>) : RecyclerView.Ada
     private lateinit var listener: HomeGalonListener
     inner class HomeGalonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private var binding: GalonItemBinding
+        private val storage = Firebase.storage("gs://tubesmobile-13f1f.appspot.com")
+        private val storageRef = storage.reference
         init {
             binding = GalonItemBinding.bind(itemView)
         }
         fun setData(galon: Galon) {
-            binding.ivGalonItem.setImageURI(Uri.parse(galon.image_galon))
             binding.tvNameGalonItem.text = galon.nama_galon
             binding.tvPriceGalonItem.text = galon.harga_galon.toString()
+            val imagesRef = storageRef.child("Galon/${galon.image_galon}")
+            Glide.with(itemView).load(imagesRef).into(binding.ivGalonItem)
             binding.btnPlus.setOnClickListener {
                 binding.tvAmountGalonItem.text = (binding.tvAmountGalonItem.text.toString().toInt() + 1).toString()
                 listener.onTambah(galon, binding.tvAmountGalonItem.text.toString().toInt())
