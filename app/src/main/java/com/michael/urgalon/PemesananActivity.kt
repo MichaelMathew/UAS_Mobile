@@ -12,6 +12,7 @@ import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.michael.urgalon.adapter.PemesananGalonAdapter
 import com.michael.urgalon.databinding.ActivityPemesananBinding
@@ -189,6 +190,15 @@ class PemesananActivity : AppCompatActivity() {
         }
         reference.push().setValue(historyPemesanan).addOnSuccessListener {
             database.getReference("users").child(Firebase.auth.currentUser!!.uid).child("point").setValue((point - diskonPoint) + (checkTotal()/8000))
+            val db = Firebase.firestore
+            db.collection("logs").add(
+                hashMapOf(
+                    "message" to "User has make order",
+                    "id_user_login" to Firebase.auth.currentUser?.uid,
+                    "email_user_login" to Firebase.auth.currentUser?.email,
+                    "date" to SimpleDateFormat("yyyy-MM-dd hh:mm:ss", Locale.ENGLISH).format(Calendar.getInstance().time)
+                )
+            )
             finish()
         }
     }
